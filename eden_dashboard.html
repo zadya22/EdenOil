@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eden – Commandes</title>
+<link rel="stylesheet" href="eden-styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<div class="dash-shell">
+  <div class="sidebar">
+    <a class="sidebar-logo" href="eden_dashboard.html">
+      <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="none" stroke="#1B4332" stroke-width="2"/><path d="M14 6L14 22M6 10L22 18M6 18L22 10" stroke="#1B4332" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Eden
+    </a>
+    <a class="nav-item" href="production.html"><span class="nav-icon" aria-hidden="true">🏭</span> Production</a>
+    <a class="nav-item" href="gestion-stock.html"><span class="nav-icon" aria-hidden="true">📦</span> Stocks</a>
+    <a class="nav-item active" href="eden_dashboard.html"><span class="nav-icon" aria-hidden="true">📋</span> Commandes</a>
+    <a class="nav-item" href="simulation.html"><span class="nav-icon" aria-hidden="true">💰</span> Simulation</a>
+    <a class="nav-item" href="parametres.html"><span class="nav-icon" aria-hidden="true">⚙️</span> Paramètres</a>
+    <a class="sidebar-public-link" href="index.html">↗ Voir le site public</a>
+    <a class="sidebar-user" href="parametres.html">
+      <span class="user-circle">M</span>
+      <span class="user-info">
+        <span class="user-info-name" style="display:block">Marcellin</span>
+        <span class="user-info-role">Producteur</span>
+      </span>
+      <span style="color:#9CA3AF;font-size:12px;" aria-hidden="true">▾</span>
+    </a>
+  </div>
+
+  <div class="main" id="main-content">
+    <div class="main-header">
+      <h1>Bonjour, Marcellin 👋</h1>
+      <a class="btn-outline" href="index.html" style="padding:10px 16px;font-size:13px">🏠 Site public</a>
+    </div>
+
+    <!-- COMMANDE ALERTE -->
+    <div class="commande-alert">
+      <span class="alert-icon" aria-hidden="true">🕐</span>
+      <div class="alert-content">
+        <div class="alert-title">Commandes en attente</div>
+        <div class="alert-detail">Ibrahim O. — 80 bidons · Ouidah · Livraison frontière<br><strong>500 F/bidon</strong></div>
+      </div>
+      <button class="btn-traiter" id="traiter-btn" type="button" onclick="openOrderDetail()">Traiter →</button>
+    </div>
+
+    <div class="content-2col">
+      <div>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <span class="kpi-icon" aria-hidden="true">📦</span>
+            <div class="kpi-value green">250 <span style="font-size:18px;font-weight:600;">bidons</span></div>
+            <div class="kpi-label">En stock</div>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-icon" aria-hidden="true">🏷️</span>
+            <div class="kpi-value amber">18 500 F</div>
+            <div class="kpi-label">Prix actuel/bidon</div>
+          </div>
+          <div class="kpi-card">
+            <span class="kpi-icon" aria-hidden="true">📅</span>
+            <div class="kpi-value" style="color:var(--gray-800);">3</div>
+            <div class="kpi-label">Commandes ce mois</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="simulation-panel">
+          <div class="sim-header">
+            <span class="sim-title">Simulation financière</span>
+            <span class="sim-icon" aria-hidden="true">📈</span>
+          </div>
+          <div class="sim-items">
+            <div class="sim-item"><div><div class="sim-label">Budget dispo.</div><div class="sim-value">2,5 M FCFA</div></div></div>
+            <div class="sim-item"><div><div class="sim-label">Noix (15 Berlingo)</div><div class="sim-value">2,0 M FCFA</div></div></div>
+            <div class="sim-item"><div><div class="sim-label">Main-d'œuvre</div><div class="sim-value">0,3 M FCFA</div></div></div>
+            <div class="sim-item"><div><div class="sim-label">Divers</div><div class="sim-value">0,2 M FCFA</div></div></div>
+            <div class="sim-item highlight"><div><div class="sim-label">Marge est. (hors saison)</div><div class="sim-value positive">+1,8 M FCFA</div></div></div>
+          </div>
+          <a class="sim-link" href="simulation.html">Ouvrir le simulateur détaillé →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="eden-script.js"></script>
+</body>
+</html>

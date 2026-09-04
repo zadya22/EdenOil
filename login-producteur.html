@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eden – Espace producteur</title>
+<link rel="stylesheet" href="eden-styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<nav class="topnav">
+  <div class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="none" stroke="#1B4332" stroke-width="2"/><path d="M14 6L14 22M6 10L22 18M6 18L22 10" stroke="#1B4332" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Eden
+  </div>
+  <div class="nav-links">
+    <a href="index.html">🏠 Retour au site public</a>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Espace producteur</h1>
+      <p class="sub">Connectez-vous pour gérer votre production, vos stocks et vos commandes.</p>
+      <form onsubmit="return handleDemoLogin(event, 'eden_dashboard.html')">
+        <label for="email">Email ou téléphone</label>
+        <input id="email" type="text" autocomplete="username" placeholder="vous@eden.bj">
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="••••••••">
+        <button class="btn-primary" type="submit">🔐 Se connecter</button>
+      </form>
+      <p class="auth-hint">Démo de portfolio : la connexion fonctionne même sans renseigner d'identifiants.</p>
+      <a class="auth-back" href="index.html">← Retour à l'accueil</a>
+    </div>
+  </div>
+</main>
+
+<script src="eden-script.js"></script>
+</body>
+</html>

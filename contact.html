@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eden – Contact</title>
+<meta name="description" content="Contactez Eden pour toute demande sur l'huile de palme brute, les volumes disponibles ou un partenariat producteur.">
+<link rel="stylesheet" href="eden-styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<nav class="topnav">
+  <div class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="none" stroke="#1B4332" stroke-width="2"/><path d="M14 6L14 22M6 10L22 18M6 18L22 10" stroke="#1B4332" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Eden
+  </div>
+  <div class="nav-links">
+    <a href="index.html">🏠 Accueil</a>
+    <a href="fournisseurs.html">👥 Fournisseurs</a>
+    <a href="eden_stock.html">📦 Stock disponible</a>
+    <a href="contact.html" class="active">📞 Contact</a>
+    <a href="login-producteur.html" class="staff-link">🔐 Espace producteur</a>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div class="page-head">
+    <h1>Contactez Eden</h1>
+    <p>Une question sur nos volumes, nos prix ou un partenariat producteur ? Notre équipe vous répond rapidement.</p>
+  </div>
+
+  <div class="container" style="grid-template-columns:1fr 1fr">
+    <div class="stock-card" style="padding:28px">
+      <h2 style="font-size:17px;margin-bottom:18px">Nos coordonnées</h2>
+      <div class="modal-row"><span>📞 Téléphone</span><b><a href="tel:+22990123456">+229 90 12 34 56</a></b></div>
+      <div class="modal-row"><span>💬 WhatsApp</span><b><a href="https://wa.me/22990123456" target="_blank" rel="noopener">Discuter</a></b></div>
+      <div class="modal-row" style="border-bottom:none"><span>📍 Localisation</span><b>Bénin — livraison frontière possible</b></div>
+    </div>
+
+    <div class="demand-card" style="position:static">
+      <div class="demand-header">
+        <span style="font-size:22px;" aria-hidden="true">✉️</span>
+        <h2>Envoyer un message</h2>
+      </div>
+      <div class="form-body">
+        <div id="demand-success" class="form-success">✅ Message envoyé. Nous vous répondrons rapidement.</div>
+        <form id="demand-form-el" onsubmit="return handleDemandSubmit(event)">
+          <div class="form-group">
+            <label for="c-nom">Nom</label>
+            <input id="c-nom" type="text" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="c-contact">Contact (téléphone ou email)</label>
+            <input id="c-contact" type="text" placeholder="Ex. : +229 90 12 34 56">
+          </div>
+          <div class="form-group">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" rows="5" placeholder="Votre message"></textarea>
+          </div>
+          <button class="btn-submit" type="submit">✉️ Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div>
+      <h4>Eden</h4>
+      <p style="margin:0;max-width:260px">Huile de palme brute de qualité industrielle, produite au Bénin.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <a href="index.html">Accueil</a>
+      <a href="eden_stock.html">Stock disponible</a>
+      <a href="fournisseurs.html">Fournisseurs</a>
+    </div>
+    <div>
+      <h4>Eden Pro</h4>
+      <a href="login-producteur.html">Espace producteur</a>
+    </div>
+  </footer>
+</main>
+
+<script src="eden-script.js"></script>
+</body>
+</html>

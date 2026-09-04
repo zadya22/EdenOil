@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eden – Stock disponible</title>
+<meta name="description" content="Consultez le stock d'huile de palme brute disponible chez Eden et faites une demande de volume.">
+<link rel="stylesheet" href="eden-styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<nav class="topnav">
+  <div class="nav-logo">
+    <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="none" stroke="#1B4332" stroke-width="2"/><path d="M14 6L14 22M6 10L22 18M6 18L22 10" stroke="#1B4332" stroke-width="1.5" stroke-linecap="round"/></svg>
+    Eden
+  </div>
+  <div class="nav-links">
+    <a href="index.html">🏠 Accueil</a>
+    <a href="fournisseurs.html">👥 Fournisseurs</a>
+    <a href="eden_stock.html" class="active">📦 Stock disponible</a>
+    <a href="contact.html">📞 Contact</a>
+    <a href="login-producteur.html" class="staff-link">🔐 Espace producteur</a>
+  </div>
+</nav>
+
+<main id="main-content" class="container">
+  <!-- STOCK TABLE -->
+  <div>
+    <div class="stock-card">
+      <div class="stock-header">
+        <span style="font-size:22px;" aria-hidden="true">📦</span>
+        <h2>Stock disponible</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Produit</th>
+            <th>Quantité disponible</th>
+            <th>Origine</th>
+            <th>Prix / Litre</th>
+            <th>Livraison</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="product-cell">
+                <div class="product-thumb" aria-hidden="true">🛢️</div>
+                <span class="product-name">Oli déli</span>
+              </div>
+            </td>
+            <td><span class="qty">120 000 L</span></td>
+            <td><span class="origin">Bénin</span></td>
+            <td><span class="price">12 500 F</span></td>
+            <td><span class="livraison-badge badge-frontiere">🚛 Frontière</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="product-cell">
+                <div class="product-thumb" aria-hidden="true">🫙</div>
+                <span class="product-name">Pena Mona</span>
+              </div>
+            </td>
+            <td><span class="qty">80 000 L</span></td>
+            <td><span class="origin">Bénin</span></td>
+            <td><span class="price">12 300 F</span></td>
+            <td><span class="livraison-badge badge-frontiere">🚛 Frontière</span></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="product-cell">
+                <div class="product-thumb" aria-hidden="true">🧴</div>
+                <span class="product-name">Albaro</span>
+              </div>
+            </td>
+            <td><span class="qty">50 000 L</span></td>
+            <td><span class="origin">Cameroun</span></td>
+            <td><span class="price">11 700 F</span></td>
+            <td><span class="livraison-badge badge-usine">🏭 Usine</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="stock-footer">
+        <span class="footer-note">Prix en FCFA – Volumes min. – Qualité industrielle</span>
+        <button class="btn-carnet" type="button" onclick="requestCarnet()">📋 Recevoir ce carnet de stocks →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMAND FORM -->
+  <div>
+    <div class="demand-card" id="demande-form">
+      <div class="demand-header">
+        <span style="font-size:22px;" aria-hidden="true">📋</span>
+        <h2>Faire une demande</h2>
+      </div>
+      <div class="form-body">
+        <div id="demand-success" class="form-success">✅ Votre demande a bien été envoyée. Notre équipe vous recontacte sous peu.</div>
+        <form id="demand-form-el" onsubmit="return handleDemandSubmit(event)">
+          <div class="form-group">
+            <label for="d-type">Type de demande</label>
+            <select id="d-type">
+              <option>Demande de stock</option>
+              <option>Demande de prix</option>
+              <option>Partenariat long terme</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="d-volume">Volume souhaité (litres)</label>
+            <input id="d-volume" type="text" placeholder="Ex. : 50 000">
+          </div>
+          <div class="form-group">
+            <label for="d-origine">Origine souhaitée</label>
+            <input id="d-origine" type="text" placeholder="Ex. : Bénin">
+          </div>
+          <div class="form-group">
+            <label for="d-destination">Destination</label>
+            <input id="d-destination" type="text" placeholder="Ex. : Cotonou, Lagos">
+          </div>
+          <div class="form-group">
+            <label for="d-contact">Contact (WhatsApp)</label>
+            <input id="d-contact" type="text" placeholder="Ex. : +229 90 12 34 56">
+          </div>
+          <button class="btn-submit" type="submit">✉️ Envoyer la demande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="eden-script.js"></script>
+</body>
+</html>

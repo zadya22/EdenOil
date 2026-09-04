@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eden – Simulation financière</title>
+<link rel="stylesheet" href="eden-styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+<div class="dash-shell">
+  <div class="sidebar">
+    <a class="sidebar-logo" href="eden_dashboard.html">
+      <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><path d="M14 2L4 8V20L14 26L24 20V8L14 2Z" fill="none" stroke="#1B4332" stroke-width="2"/><path d="M14 6L14 22M6 10L22 18M6 18L22 10" stroke="#1B4332" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Eden
+    </a>
+    <a class="nav-item" href="production.html"><span class="nav-icon" aria-hidden="true">🏭</span> Production</a>
+    <a class="nav-item" href="gestion-stock.html"><span class="nav-icon" aria-hidden="true">📦</span> Stocks</a>
+    <a class="nav-item" href="eden_dashboard.html"><span class="nav-icon" aria-hidden="true">📋</span> Commandes</a>
+    <a class="nav-item active" href="simulation.html"><span class="nav-icon" aria-hidden="true">💰</span> Simulation</a>
+    <a class="nav-item" href="parametres.html"><span class="nav-icon" aria-hidden="true">⚙️</span> Paramètres</a>
+    <a class="sidebar-public-link" href="index.html">↗ Voir le site public</a>
+    <a class="sidebar-user" href="parametres.html">
+      <span class="user-circle">M</span>
+      <span class="user-info"><span class="user-info-name" style="display:block">Marcellin</span><span class="user-info-role">Producteur</span></span>
+      <span style="color:#9CA3AF;font-size:12px;" aria-hidden="true">▾</span>
+    </a>
+  </div>
+
+  <div class="main" id="main-content">
+    <a class="back-link" href="eden_dashboard.html">← Retour au tableau de bord</a>
+    <div class="main-header"><h1>Simulation financière</h1></div>
+
+    <p style="color:var(--gray-600);font-size:14px;margin-bottom:20px;max-width:520px">Ajustez les montants pour estimer votre marge avant de lancer une nouvelle campagne de production.</p>
+
+    <div class="simulation-panel" style="max-width:560px">
+      <div class="sim-header"><span class="sim-title">Paramètres</span><span class="sim-icon" aria-hidden="true">📈</span></div>
+      <div class="sim-items">
+        <div class="sim-item"><div class="sim-label">Budget disponible (M FCFA)</div><input id="sim-budget" type="number" step="0.1" value="2.5" oninput="recomputeSimulation()"></div>
+        <div class="sim-item"><div class="sim-label">Noix — 15 Berlingo (M FCFA)</div><input id="sim-noix" type="number" step="0.1" value="2.0" oninput="recomputeSimulation()"></div>
+        <div class="sim-item"><div class="sim-label">Main-d'œuvre (M FCFA)</div><input id="sim-main" type="number" step="0.1" value="0.3" oninput="recomputeSimulation()"></div>
+        <div class="sim-item"><div class="sim-label">Divers (M FCFA)</div><input id="sim-divers" type="number" step="0.1" value="0.2" oninput="recomputeSimulation()"></div>
+        <div class="sim-item highlight"><div><div class="sim-label">Marge estimée (hors saison)</div><div class="sim-value positive" id="sim-marge-out">+1,8 M FCFA</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="eden-script.js"></script>
+<script>document.addEventListener('DOMContentLoaded', recomputeSimulation);</script>
+</body>
+</html>
